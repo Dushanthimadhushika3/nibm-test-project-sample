@@ -1,11 +1,4 @@
-/*
- * File: index.tsx
- * Project: MT Cloud Portal
- * Author: Dushanthi Madhushika (dmadhushika@mitrai.com)
- * File Created: Thursday, 24 March 2022 8:30 am
- * Module: MT Cloud Portal Frontend
- * Copyright 2022 - 2022 Mitra Innovation Ltd.
- */
+
 import React, { memo, useRef, useEffect } from 'react';
 import usePrevious from '../../../../../apps/customer/components/hooks/useOtpPrv';
 
