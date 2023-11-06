@@ -1,11 +1,4 @@
-/*
- * File: index.tsx
- * Project: MT Cloud Portal
- * Author: Dushanthi Madhushika (dmadhushika@mitrai.com)
- * File Created: Wednesday, 23 March 2022 3:30 pm
- * Module: MT Cloud Portal Frontend
- * Copyright 2022 - 2022 Mitra Innovation Ltd.
- */
+
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import api from '../../../../../apps/customer/api';
