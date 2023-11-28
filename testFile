@@ -1,0 +1,15 @@
+function haveAllItemsLess(array) {
+  const maxId = array.reduce((max, itemId) => {
+    const number = parseInt(itemId.replace('cid', ''), 10);
+    return number > max ? number : max;
+  }, 0);
+
+  for (let i = 1; i < maxId; i++) {
+    const currentItem = 'cid' + i;
+    if (!array.includes(currentItem)) {
+      return false;
+    }
+  }
+
+  return true;
+}
