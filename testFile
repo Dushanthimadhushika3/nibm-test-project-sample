@@ -10,6 +10,6 @@ function haveAllItemsLess(array) {
       return false;
     }
   }
-
+const missingString = originalArray.find(item => !modifiedArray.includes(item));
   return true;
 }
