@@ -13,3 +13,11 @@ function haveAllItemsLess(array) {
 const missingString = originalArray.find(item => !modifiedArray.includes(item));
   return true;
 }
+
+const refreshPageWithoutQueryParams = () => {
+    // Reload the page
+    window.location.reload();
+
+    // Remove query parameters by setting an empty string
+    window.history.replaceState({}, document.title, window.location.pathname);
+  };
