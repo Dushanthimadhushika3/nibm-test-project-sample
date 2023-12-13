@@ -21,3 +21,13 @@ const refreshPageWithoutQueryParams = () => {
     // Remove query parameters by setting an empty string
     window.history.replaceState({}, document.title, window.location.pathname);
   };
+
+function formatPrice(priceString) {
+  // Convert the string to a number and round to two decimal places
+  const price = parseFloat(priceString).toFixed(2);
+
+  // Add commas for thousand separators
+  const formattedPrice = price.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  return formattedPrice;
+}
