@@ -113,3 +113,39 @@ const PrintIframe = () => {
 
 export default PrintIframe;
 
+import React, { useState } from 'react';
+
+const PrintIframe = () => {
+  const [isPrintModalOpen, setIsPrintModalOpen] = useState(false);
+
+  const handlePrint = () => {
+    setIsPrintModalOpen(true);
+  };
+
+  const handleClosePrintModal = () => {
+    setIsPrintModalOpen(false);
+  };
+
+  return (
+    <div>
+      <button onClick={handlePrint}>Print Document</button>
+
+      {isPrintModalOpen && (
+        <div className="print-modal">
+          <div className="print-modal-content">
+            <button onClick={handleClosePrintModal}>Close</button>
+            <iframe
+              title="Print View"
+              src="https://example.com/document-url"
+              style={{ width: '100%', height: '80vh', border: 'none' }}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PrintIframe;
+
+
