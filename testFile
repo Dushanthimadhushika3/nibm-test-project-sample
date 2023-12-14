@@ -31,3 +31,7 @@ function formatPrice(priceString) {
 
   return formattedPrice;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+      $('.chosen-select').chosen();
+    });
