@@ -35,3 +35,18 @@ function formatPrice(priceString) {
 document.addEventListener('DOMContentLoaded', function () {
       $('.chosen-select').chosen();
     });
+ <div className="dropdown">
+              <button className="purple-button">
+                {selectedOption || 'Select an option'}
+              </button>
+              <div className="dropdown-content">
+                <select onChange={handleOptionChange}>
+                  <option value="" disabled>
+                    Select an option
+                  </option>
+                  <option value="page1">Page 1</option>
+                  <option value="page2">Page 2</option>
+                  {/* Add more options as needed */}
+                </select>
+              </div>
+            </div>
