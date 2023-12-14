@@ -148,4 +148,36 @@ const PrintIframe = () => {
 
 export default PrintIframe;
 
+import React from 'react';
+
+const PrintButton = ({ byteArray }) => {
+  const handlePrint = () => {
+    // Create a Blob from the byte array
+    const blob = new Blob([byteArray], { type: 'application/pdf' });
+
+    // Create a data URL for the Blob
+    const dataUrl = URL.createObjectURL(blob);
+
+    // Create a hidden iframe
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    // Set the source of the iframe to the data URL
+    iframe.src = dataUrl;
+
+    // When the iframe is loaded, trigger the print dialog
+    iframe.onload = () => {
+      iframe.contentWindow.print();
+    };
+  };
+
+  return (
+    <div>
+      <button onClick={handlePrint}>Print PDF</button>
+    </div>
+  );
+};
+
+export default PrintButton;
 
