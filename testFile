@@ -94,3 +94,22 @@ document.addEventListener('DOMContentLoaded', function () {
 printWindow.onload = () => {
       printWindow.print();
     };
+import React from 'react';
+
+const PrintIframe = () => {
+  const handlePrint = () => {
+    const printWindow = window.open('', '_blank');
+    
+    // Assuming your document URL is 'https://example.com/document-url'
+    printWindow.document.write('<iframe src="https://example.com/document-url" onload="window.print()" style="width:100%; height:100vh;"></iframe>');
+  };
+
+  return (
+    <div>
+      <button onClick={handlePrint}>Print Document</button>
+    </div>
+  );
+};
+
+export default PrintIframe;
+
