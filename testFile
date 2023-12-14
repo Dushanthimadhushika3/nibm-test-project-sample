@@ -91,3 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+printWindow.onload = () => {
+      printWindow.print();
+    };
