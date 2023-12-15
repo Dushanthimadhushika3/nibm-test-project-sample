@@ -181,3 +181,8 @@ const PrintButton = ({ byteArray }) => {
 
 export default PrintButton;
 
+const pathArray = new URL(url).pathname.split("/");
+
+// Get the last path value
+const lastPath = pathArray[pathArray.length - 1];
+
